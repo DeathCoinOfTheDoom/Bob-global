@@ -1,5 +1,5 @@
 
-# h2w
+# Hyra global workflow
 This is how we are working on our main and side project.
  - Produit 1
  - Produit 2
