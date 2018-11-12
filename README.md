@@ -31,3 +31,36 @@ Note that global variables need to be used in very special conditions do not abu
 We are using **PascalCase** for our class name and **camelCase** function name. Try to have only function with low logic inside in your code.
 Immutable data structure.
 > Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic.
+
+-----------_Vue JS part
+
+**Component**
+
+Component must encapsulate a small part of logic. Just call it for its layout. 
+It is recommended to initialize all the data properties that needs to be reactive upfront in the data option. For example, given the following template:
+
+```html
+ <div id="demo">
+  <p v-class="green: validation.valid">{{message}}</p>
+  <input v-model="message">
+</div> 
+```
+```javascript
+new Vue({
+  el: '#demo',
+  data: {
+    message: '',
+    validation: {
+      valid: false
+    }
+  }
+})
+```
+
+**Views**
+
+About the `import` : please do not use absolute import there is an alias that refer to `src/`. You can call it as the following with the key `@`.
+> Example : `@/components`
+
+When you are using import syntax in es6 if you are specifying a file the will search the closest index.js file. 
+> Example : `@/component` is equal to `@/component/index.js` 
