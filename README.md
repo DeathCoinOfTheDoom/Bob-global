@@ -14,7 +14,7 @@ How to commit ?
 ```git commit -m "<name>/explicit description of what you have made"```
 >
 Example :
-> ```git commit -m "gl/Delete Card component"```
+> ```git commit -m "gl/delete card component"```
 
 
 ## Code :
